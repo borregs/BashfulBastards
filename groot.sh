@@ -6,8 +6,8 @@
 # this is usually done by a graphical application
 # but mount methods vary for diferent media and fmts
 
-
-GROOTP="<path/where/media/mounted>"
+GROOTP="{mountpoint}"
+read -p "Insert Path of device to chroot in like a G >>" GROOTP
 
 sudo mount --bind /dev $GROOTP/dev
 sudo mount --bind /tmp $GROOTP/tmp
