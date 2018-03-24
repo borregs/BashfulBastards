@@ -1,0 +1,32 @@
+#!/bin/bash
+
+EOBOT="https://www.eobot.com/api.aspx?"
+EOBOTID=1034840
+
+EMAIL="bravoramima@gmail.com"
+
+   COIN="MXN
+	 BTC
+	 ETH
+	 LTC
+	 XMR
+	 ADA
+	 XRP"
+
+   OPTS="total=
+   	 coin=
+	 "
+
+
+#API implementation by: borregs#
+
+echo ''
+banner "··  EOBOT MINER STATS  ··"
+echo ''
+
+
+TCMX= "$(curl '$EOBOT'${OPTS[1]}${COIN[0]})"
+echo "$TCMX"
+
+
+BITSO="https://api.bitso.com/v3/"
