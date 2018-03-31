@@ -2,8 +2,11 @@
 
 EOBOT="https://www.eobot.com/api.aspx?"
 EOBOTID=1034840
-
+BITSO="https://api.bitso.com/v3/"
 EMAIL="bravoramima@gmail.com"
+TXTFILE = aometmp.txt
+
+
 
    COIN="MXN
 	 BTC
@@ -25,8 +28,9 @@ banner "··  EOBOT MINER STATS  ··"
 echo ''
 
 
-TCMX= "$(curl '$EOBOT'${OPTS[1]}${COIN[0]})"
-echo "$TCMX"
+rm -i $TXTFILE
 
-
-BITSO="https://api.bitso.com/v3/"
+curl 'https://www.eobot.com/api.aspx?idmining=1034840&json=0' > $TXTFILE
+curl 'https://www.eobot.com/api.aspx?idSpeed=1034840&json=0' >> $TXTFILE
+curl 'https://www.eobot.com/api.aspx?coin=BTC' >> $TXTFILE
+curl 'https://www.eobot.com/api.aspx?coin=MXN' >> $TXTFILE
